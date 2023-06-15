@@ -37,34 +37,32 @@ function ajouterLesProduitsDansLaPage(afficherProduits) {
     const ancreDuPrix = document.getElementById('price')
     const ancreCouleurs = document.getElementById('colors')
 
-  
+    // Ajoute image
+    const image = document.createElement('img')
+    // Ajoute un nouvel attribut ou change la valeur d'un attribut existant pour l'élément spécifié. 
+    // Si l'attribut existe déjà, la valeur est mise à jour, sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.
+    image.setAttribute('src', afficherProduits.imageUrl)
+    image.setAttribute('alt', afficherProduits.altTxt)
+    ancreImage.appendChild(image)
 
-      // Ajoute image
-      const image = document.createElement('img')
-      // Ajoute un nouvel attribut ou change la valeur d'un attribut existant pour l'élément spécifié. 
-      // Si l'attribut existe déjà, la valeur est mise à jour, sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.
-      image.setAttribute('src', afficherProduits.imageUrl)
-      image.setAttribute('alt', afficherProduits.altTxt)
-      ancreImage.appendChild(image)
-
-      // Ajoute titre
-      title.textContent = afficherProduits.name
+    // Ajoute titre
+    title.textContent = afficherProduits.name
         
-      // Ajoute description
-      description.textContent = afficherProduits.description
+    // Ajoute description
+    description.textContent = afficherProduits.description
 
-      // Ajoute prix
-      price.textContent = afficherProduits.price
+    // Ajoute prix
+    price.textContent = afficherProduits.price
 
-      // Pour les couleurs, afficherProduits = nom de la fonction, .colors = couleurs qui se trouve dans l'api
-      for (let color of afficherProduits.colors) {
-          // Crée l'élément
-          let options = document.createElement('option');
-          // Afficher en html la balise <option> avec les couleurs ${colors}
-          options.innerHTML = `<option value="${color}">${color}</option>`
-          // Ajoute à l'ancre
-          ancreCouleurs.appendChild(options);
-      };
+    // Pour les couleurs, afficherProduits = nom de la fonction, .colors = couleurs qui se trouve dans l'api
+    for (let color of afficherProduits.colors) {
+        // Crée l'élément
+        let options = document.createElement('option');
+        // Afficher en html la balise <option> avec les couleurs ${colors}
+        options.innerHTML = `<option value="${color}">${color}</option>`
+        // Ajoute à l'ancre
+        ancreCouleurs.appendChild(options);
+    };
 
 }
 
