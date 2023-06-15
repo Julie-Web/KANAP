@@ -1,7 +1,7 @@
 // Récupére
 addProduct = document.getElementById('addToCart');
 
-// addEventListener = écouter d'événement donc au clic
+// addEventListener = écoute d'événement donc au clic
 addProduct.addEventListener("click", function add () {
     // Les navigateurs modernes fournissent URLSearchParams et URL.searchParams pour faciliter l’analyse des paramètres de la chaîne de requête
     // Le constructeur URLSearchParams() crée et renvoie un nouvel objet

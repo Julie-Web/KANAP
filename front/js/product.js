@@ -37,7 +37,7 @@ function ajouterLesProduitsDansLaPage(afficherProduits) {
     const ancreDuPrix = document.getElementById('price')
     const ancreCouleurs = document.getElementById('colors')
 
-    // Parcours produits disponibles dans l'API
+  
 
       // Ajoute image
       const image = document.createElement('img')
